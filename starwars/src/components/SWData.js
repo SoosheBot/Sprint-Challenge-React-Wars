@@ -4,15 +4,14 @@ import axios from "axios";
 // import styled from 'styled-components';
 
 export default function SWData() {
-    const [people, setPeople] = useState([]);
-
+    const [people, setPeople] = useState("");
+    
     useEffect(() => {
         axios
             .get(`https://swapi.co/api/people/`)
             .then(response => {
-            const peopleInfo = response.results.data;
-            console.log("Power to the people", peopleInfo);
-            setPeople(peopleInfo);
+            console.log("Power to the people", response);
+            setPeople(response.data);
     })
         .catch(error => {
             console.log("Not the droids...people you seek", error);
@@ -21,14 +20,13 @@ export default function SWData() {
     }, []);
 
     return (
-        <div className="sw-people-list">
-            {people.map(item => {
+        <div className="sw-info">
                 return (
                     <SWCard
                     name={people.name}
                     />
                 );
-            })}
+
         </div>
     );
 }

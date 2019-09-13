@@ -1,14 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Card = `styled.div
-font-size:2rem;
+const Card = styled.div`
+    color:purple;
 `;
 
+
+
 const SWCard = props => {
-    return (
-        <Card name={props.name}/>
-    );
+   return (
+    <Card>
+        <h2>{props.name}</h2>
+    </Card>
+   );
 };
 
 export default SWCard;
