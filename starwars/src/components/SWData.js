@@ -4,7 +4,7 @@ import axios from "axios";
 // import styled from 'styled-components';
 
 export default function SWData() {
-    const [people, setPeople] = useState("");
+    const [people, setPeople] = useState([]);
     
     useEffect(() => {
         axios
@@ -21,11 +21,16 @@ export default function SWData() {
 
     return (
         <div className="sw-info">
-                return (
-                    <SWCard
-                    name={people.name}
-                    />
+            {people.map(info => {
+                return(
+                    <SWCard key={info}>
+                        name={info}
+                        
+                    </SWCard>
                 );
+
+            })};
+                
 
         </div>
     );

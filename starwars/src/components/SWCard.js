@@ -9,8 +9,9 @@ const Card = styled.div`
 
 const SWCard = props => {
    return (
-    <Card>
+    <Card key={props.id}>
         <h2>{props.name}</h2>
+        <h3>{props.height}</h3>
     </Card>
    );
 };
