@@ -14,8 +14,8 @@ const Card = styled.div`
         text-shadow: 1px 1px 5px #fff;
     }
     h2{
-        margin-left:30%;
-        margin-right:30%;
+        margin-left:50%;
+        margin-right:50%;
 
     }
 
