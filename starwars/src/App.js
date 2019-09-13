@@ -1,4 +1,5 @@
 import React from 'react';
+import SWData from './components/SWData';
 import './App.css';
 
 const App = () => {
@@ -12,6 +13,7 @@ const App = () => {
   return (
     <div className="App">
       <h1 className="Header">React Wars</h1>
+      <SWData />
     </div>
   );
 }
